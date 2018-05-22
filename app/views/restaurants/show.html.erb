@@ -1,0 +1,9 @@
+<h1> <%= @restaurant.name %> </h1>
+<p> <%= @restaurant.address %> </p>
+<p> <%= @restaurant.food_type %> </p>
+
+<%= link_to "Edit restaurant", edit_restaurant_path(@restaurant) %>
+
+<%= link_to restaurants_path do%>
+  <i class="fas fa-arrow-left"></i> Go Back
+<% end %>

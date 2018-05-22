@@ -1,0 +1,14 @@
+<h1>List of restaurants</h1>
+
+<% @restaurants.each do |restaurant| %>
+  <div>
+    <h5> <%= link_to restaurant.name, restaurant_path(restaurant) %> </h5>
+    <p> <% restaurant.address %> </p>
+    <p> <%= link_to restaurant_path(restaurant), method: :delete, class: 'text-danger' do %>
+        <i class="fas fa-trash-alt"></i> Delete
+        <% end %>
+    </p>
+  </div>
+<% end %>
+
+<%= link_to 'Create new', new_restaurant_path, class: 'btn btn-primary' %>
